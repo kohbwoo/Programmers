@@ -8,24 +8,10 @@
 # numbers의 원소는 0 이상 1,000 이하입니다.
 # 정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
 
-numbers = [1, 20, 3, 4]
-tmp = ""
-str_Tmp = []
-
-for i in numbers:
-    tmp = tmp + str(i)
-list(tmp)
-
-for j in range(0,len(tmp)):
-    # print(tmp[j], type(tmp[j]))
-    str_Tmp.append(int(tmp[j]))
-
-str_Tmp.sort(reverse=True)
-
-answer = ""
-for i in str_Tmp:
-    answer = answer + str(i)
+def solution(numbers):
+    numbers.sort(reverse=True)
+    print(numbers)
+    print("".join(map(str, numbers)))
 
 
-print(answer)
-print(type(answer))
+print(solution([3, 30, 34, 5, 9]))

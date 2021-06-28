@@ -1,16 +1,19 @@
 def solution(left, right):
-    list_ = []
-    sum = 1
+    tmp = []
+    count = []
+    answer = 0
     for i in range(left,right+1):
-        list_.append(i)
-
-
-    for j in range(left, right):
-        for i in range(1,j+1):
-            if list_[left-left] % i == 0:
-                print(i)
-        print()
-
+        tmp.append(i)
+    for j in range(0, len(tmp)):
+        for a in range(1, tmp[j] + 1):
+            if tmp[j] % a == 0:
+                count.append(a)
+        if len(count) % 2 == 0:
+            answer = answer + a
+        else:
+            answer = answer - a
+        count = []
+    return answer
 
 
 print(solution(13,17))

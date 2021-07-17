@@ -12,14 +12,15 @@ def solution(answers):
             if user[i][j] == answers[j]:
                 score[i] = score[i] + 1
     answers = []
+    print((score.count(max(score))-1))
     if (score.count(max(score))) == 1:
         answers.append(score.index(max(score)) + 1)
         return answers
     else:
         for i in range(0,3):
-            if score[i] == (score.count(max(score))-1):
+            if score[i] == (score.count(max(score))+1):
                 answers.append(i+1)
         return answers
 
 
-print(solution(([1, 3, 2, 4, 2])))
+print(solution(([1,2,1,1])))

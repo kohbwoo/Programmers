@@ -11,4 +11,4 @@ def solution(arr):
             answer.append(arr[i])
     return answer
 
-print(solution([1,1]))
+print(solution([1,0,0,0]))

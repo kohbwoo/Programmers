@@ -29,7 +29,7 @@ def ICN1(tickets):
                     if j == 1:
                         break
                     answer.append(tickets[i][j+1])
-                    key = key + 1
+                    key += 1
     return answer
 
 
